@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.16)
+project(CMakeLists)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+set(SOURCES
+    main.cpp
+    mainwindow.cpp
+    loginwindow.cpp
+    bookwindow.cpp
+    readerwindow.cpp
+    issuewindow.cpp
+    returnwindow.cpp
+    book.cpp
+    reader.cpp
+)
+
+set(HEADERS
+    mainwindow.h
+    loginwindow.h
+    bookwindow.h
+    readerwindow.h
+    issuewindow.h
+    returnwindow.h
+    book.h
+    reader.h
+)
+
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
+
+# Создание необходимых директорий
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/database)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/users)
