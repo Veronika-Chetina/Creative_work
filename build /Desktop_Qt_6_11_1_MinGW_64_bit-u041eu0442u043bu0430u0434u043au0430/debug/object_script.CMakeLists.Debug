@@ -1,0 +1,15 @@
+debug/book.o
+debug/bookwindow.o
+debug/issuewindow.o
+debug/loginwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/reader.o
+debug/readerwindow.o
+debug/returnwindow.o
+debug/moc_bookwindow.o
+debug/moc_issuewindow.o
+debug/moc_loginwindow.o
+debug/moc_mainwindow.o
+debug/moc_readerwindow.o
+debug/moc_returnwindow.o
